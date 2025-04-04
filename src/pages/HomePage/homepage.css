@@ -15,7 +15,24 @@
   width: 40%;
 }
 .profile-pic {
+  border: 6px solid transparent;
   border-radius: 10%;
+  background: linear-gradient(
+    135deg,
+    #ce4a7e,
+    #f08fb1
+  ); /* =maybe remove, idk whether should keep, after design then judge if out of place or not */
   width: 18vw;
   height: 30vh;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
