@@ -1,0 +1,21 @@
+.intro {
+  flex-direction: row;
+  display: flex;
+  gap: 10rem;
+  margin-top: 5rem;
+  width: 75vw;
+  height: auto;
+  justify-content: center;
+}
+
+.yappings {
+  align-items: flex-start;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  width: 40%;
+}
+.profile-pic {
+  border-radius: 10%;
+  width: 18vw;
+  height: 30vh;
+}
