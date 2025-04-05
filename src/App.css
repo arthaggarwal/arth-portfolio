@@ -4,6 +4,7 @@
   --primary-color: #1c1c1bff;
   --secondary-color: #ce4a7eff;
   --tertiary-color: #f0f0f0;
+  --card-color: #2a2a29;
   --main-font: "Poppins", sans-serif;
   color: var(--tertiary-color);
 }
@@ -19,13 +20,13 @@
 
 .header {
   font-size: 2.75rem;
-  font-weight: 600;
+  font-weight: 800;
   margin: 0;
 }
 
 .sub-header {
-  font-size: 2rem;
-  font-weight: 450;
+  font-size: 1.75rem;
+  font-weight: 600;
   line-height: 1.5;
   margin: 0;
 }
@@ -34,4 +35,6 @@
   width: 100%;
   text-wrap: wrap;
   font-size: 1rem;
+  font-weight: 400;
+  color: #cccccc;
 }
