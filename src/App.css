@@ -6,7 +6,13 @@
   --tertiary-color: #f0f0f0;
   --card-color: #2a2a29;
   --main-font: "Poppins", sans-serif;
+  font: var(--main-font);
   color: var(--tertiary-color);
+}
+
+html,
+body {
+  background-color: var(--primary-color);
 }
 
 .body {
@@ -32,7 +38,7 @@
 }
 
 .body-text {
-  width: 100%;
+  width: 150%;
   text-wrap: wrap;
   font-size: 1rem;
   font-weight: 400;

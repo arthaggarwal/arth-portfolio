@@ -20,11 +20,10 @@
   width: 50%;
 }
 .profile-pic {
-  border: 6px solid transparent;
   border-radius: 10%;
   background: var(--secondary-color);
-  width: 15vw;
-  height: 25vh;
+  width: 16vw;
+  height: 26vh;
   margin-left: 20rem;
 }
 

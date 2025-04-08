@@ -18,7 +18,7 @@ const HomePage = () => {
   const scrollLeft = () => {
     const container = scrollContainerRef.current;
     if (container) {
-      const cardWidth = container.firstChild.offsetWidth + 16; // Card width + gap (adjust gap if necessary)
+      const cardWidth = container.firstChild.offsetWidth + 30;
       container.scrollBy({
         left: -cardWidth,
         behavior: "smooth",
@@ -29,7 +29,7 @@ const HomePage = () => {
   const scrollRight = () => {
     const container = scrollContainerRef.current;
     if (container) {
-      const cardWidth = container.firstChild.offsetWidth + 16; // Card width + gap (adjust gap if necessary)
+      const cardWidth = container.firstChild.offsetWidth + 20;
       container.scrollBy({
         left: cardWidth,
         behavior: "smooth",
@@ -45,9 +45,7 @@ const HomePage = () => {
             {/* ts is the short intro self part */}
             <p className="header">Arth Aggarwal</p>
             <p className="sub-header">{introduction.subHeading}</p>
-            <div className="body-text-container">
-              <p className="body-text">{introduction.bodyText}</p>
-            </div>
+            <p className="body-text">{introduction.bodyText}</p>
             <Icons />
           </div>
           <img
