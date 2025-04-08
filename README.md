@@ -1,3 +1,7 @@
+IN CONSTRUCTION, NO WHERE CLOSE TO DONE
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
