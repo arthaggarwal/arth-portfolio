@@ -1,5 +1,6 @@
 import React from "react";
 
+// icons
 const Icons = () => {
   return (
     <div className="icons">
