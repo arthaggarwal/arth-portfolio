@@ -1,7 +1,7 @@
 .intro {
   flex-direction: row;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 7rem;
   width: 60vw;
   height: auto;
   align-items: center;
@@ -23,7 +23,7 @@
   border-radius: 10%;
   background: var(--secondary-color);
   width: 16vw;
-  height: 26vh;
+  height: 30vh;
   margin-left: 20rem;
 }
 
@@ -47,7 +47,7 @@
 .project-area {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   width: 60vw;
 }
 

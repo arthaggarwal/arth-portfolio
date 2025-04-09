@@ -30,6 +30,7 @@ const Icons = () => {
           src={require("../../../assets/icons/icons8-github-logo-50.png")}
           alt="github"
           className="github-icon icon"
+          style={{ width: "28px", height: "28px" }}
         />
       </a>
     </div>

@@ -6,7 +6,7 @@
   --tertiary-color: #f0f0f0;
   --card-color: #2a2a29;
   --main-font: "Poppins", sans-serif;
-  font: var(--main-font);
+  font-family: var(--main-font);
   color: var(--tertiary-color);
 }
 

@@ -7,6 +7,7 @@ import projects from "../../data/homepage/projects";
 // components
 import Icons from "./components/icons";
 import ProjectCard from "./components/project_card";
+import Navbar from "../../components/navbar";
 
 // styles
 import "../../App.css";
@@ -40,6 +41,7 @@ const HomePage = () => {
   return (
     <div className="body">
       <div className="content-wrapper">
+        <Navbar current_page="home" />
         <div className="intro">
           <div className="yappings">
             {/* ts is the short intro self part */}
@@ -71,7 +73,7 @@ const HomePage = () => {
             <div className="project-container" ref={scrollContainerRef}>
               {projects.map((project, index) => (
                 <ProjectCard
-                  key={index} // Add a unique key for each card
+                  key={index}
                   header={project.header}
                   body={project.body}
                   Icon={project.Icon}
