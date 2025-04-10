@@ -47,7 +47,7 @@ export default function Navbar({ current_page }) {
         Home
       </a>
       <a
-        href=""
+        href="/experiences"
         style={{
           ...nav_item,
           color: current_page === "experiences" ? "#ce4a7e" : "#fff",
@@ -61,7 +61,7 @@ export default function Navbar({ current_page }) {
         Experiences
       </a>
       <a
-        href=""
+        href="/achievements"
         style={{
           ...nav_item,
           color: current_page === "achievements" ? "#ce4a7e" : "#fff",
