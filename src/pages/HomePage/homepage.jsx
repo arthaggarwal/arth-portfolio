@@ -44,7 +44,6 @@ const HomePage = () => {
         <Navbar current_page="home" />
         <div className="intro">
           <div className="yappings">
-            {/* ts is the short intro self part */}
             <p className="header">Arth Aggarwal</p>
             <p className="sub-header">{introduction.subHeading}</p>
             <p className="body-text">{introduction.bodyText}</p>
