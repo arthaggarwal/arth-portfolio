@@ -7,7 +7,6 @@ export default function Card({ year, title, description, Icon, achievement }) {
       <Icon />
       <p className="year">{year}</p>
       <p className="title">{title}</p>
-      <p className="achievement">{achievement}</p>
       <p className="description">{description}</p>
     </div>
   );

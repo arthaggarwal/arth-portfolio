@@ -15,7 +15,7 @@ export default function Navbar({ current_page }) {
 
   return (
     <div
-      className="nav-container"
+      className="nav-container navbar"
       style={{
         display: "flex",
         gap: "1vw",
@@ -31,6 +31,7 @@ export default function Navbar({ current_page }) {
         justifyContent: "space-around",
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
         marginBottom: "1rem",
+        zIndex: 1000,
       }}
     >
       <a
