@@ -8,6 +8,7 @@ import projects from "../../data/homepage/projects";
 import Icons from "./components/icons";
 import ProjectCard from "./components/project_card";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 // styles
 import "../../App.css";
@@ -86,6 +87,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

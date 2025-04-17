@@ -4,6 +4,7 @@ import "./achievements.css";
 import "../../App.css";
 import Card from "./components/card";
 import comps from "../../data/achievements/competitions";
+import Footer from "../../components/footer";
 
 export default function Achievements() {
   return (
@@ -19,6 +20,7 @@ export default function Achievements() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
