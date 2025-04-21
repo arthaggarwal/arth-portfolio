@@ -38,11 +38,11 @@ export default function Navbar({ current_page }) {
         href="/"
         style={{
           ...nav_item,
-          color: current_page === "home" ? "#ce4a7e" : "#fff",
+          color: current_page === "home" ? "#DD7596" : "#fff",
         }}
-        onMouseOver={(e) => (e.target.style.color = "#ce4a7e")}
+        onMouseOver={(e) => (e.target.style.color = "#DD7596")}
         onMouseOut={(e) =>
-          (e.target.style.color = current_page === "home" ? "#ce4a7e" : "#fff")
+          (e.target.style.color = current_page === "home" ? "#DD7596" : "#fff")
         }
       >
         Home
@@ -51,12 +51,12 @@ export default function Navbar({ current_page }) {
         href="/experiences"
         style={{
           ...nav_item,
-          color: current_page === "experiences" ? "#ce4a7e" : "#fff",
+          color: current_page === "experiences" ? "#DD7596" : "#fff",
         }}
-        onMouseOver={(e) => (e.target.style.color = "#ce4a7e")}
+        onMouseOver={(e) => (e.target.style.color = "#DD7596")}
         onMouseOut={(e) =>
           (e.target.style.color =
-            current_page === "experiences" ? "#ce4a7e" : "#fff")
+            current_page === "experiences" ? "#DD7596" : "#fff")
         }
       >
         Experiences
@@ -65,12 +65,12 @@ export default function Navbar({ current_page }) {
         href="/achievements"
         style={{
           ...nav_item,
-          color: current_page === "achievements" ? "#ce4a7e" : "#fff",
+          color: current_page === "achievements" ? "#DD7596" : "#fff",
         }}
-        onMouseOver={(e) => (e.target.style.color = "#ce4a7e")}
+        onMouseOver={(e) => (e.target.style.color = "#DD7596")}
         onMouseOut={(e) =>
           (e.target.style.color =
-            current_page === "achievements" ? "#ce4a7e" : "#fff")
+            current_page === "achievements" ? "#DD7596" : "#fff")
         }
       >
         Achievements
