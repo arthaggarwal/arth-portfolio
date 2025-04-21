@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 // data
 import introduction from "../../data/homepage/introduction";
@@ -16,6 +16,20 @@ import "./homepage.css";
 
 const HomePage = () => {
   const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    // Animate intro and skills section
+    const intro = document.querySelector('.intro');
+    if (intro) intro.classList.add('fade-in');
+    const skills = document.querySelector('.skills-section');
+    if (skills) skills.classList.add('fade-in-delay');
+    // Animate project cards
+    const cards = document.querySelectorAll('.project-container .project-card');
+    cards.forEach((card, i) => {
+      card.style.animationDelay = `${0.3 + i * 0.15}s`;
+      card.classList.add('animated-project-card');
+    });
+  }, []);
 
   const scrollLeft = () => {
     const container = scrollContainerRef.current;
@@ -41,50 +55,50 @@ const HomePage = () => {
 
   return (
     <div className="body">
-      <div className="content-wrapper">
-        <Navbar current_page="home" />
-        <div className="intro">
-          <div className="yappings">
-            <p className="header">Arth Aggarwal</p>
-            <p className="sub-header">{introduction.subHeading}</p>
-            <p className="body-text">{introduction.bodyText}</p>
-            <Icons />
-          </div>
-          <img
-            className="profile-pic"
-            src={require("../../assets/placeholder.png")}
-            alt="Profile"
-          />
-        </div>
-        <div className="project-area">
-          <p
-            style={{
-              fontSize: "2rem",
-              fontWeight: "700",
-              marginBottom: "1rem",
-            }}
-          >
-            Projects I've worked on...
+      <Navbar current_page="home" />
+      <div className="intro">
+        <div className="yappings">
+          <p className="header">Arth Aggarwal</p>
+          <p className="sub-header">{introduction.subHeading}</p>
+          <p className="body-text" style={{ width: "130%" }}>
+            {introduction.bodyText}
           </p>
-          <div className="scroll-controls">
-            <button className="scroll-button left" onClick={scrollLeft}>
-              &#8592;
-            </button>
-            <div className="project-container" ref={scrollContainerRef}>
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  header={project.header}
-                  body={project.body}
-                  Icon={project.Icon}
-                  link={project.link}
-                />
-              ))}
-            </div>
-            <button className="scroll-button right" onClick={scrollRight}>
-              &#8594;
-            </button>
+          <Icons />
+        </div>
+        <img
+          className="profile-pic"
+          src={require("../../assets/placeholder.png")}
+          alt="Profile"
+        />
+      </div>
+      <div className="project-area">
+        <p
+          style={{
+            fontSize: "2rem",
+            fontWeight: "700",
+            marginBottom: "1rem",
+          }}
+        >
+          Projects I've worked on...
+        </p>
+        <div className="scroll-controls">
+          <button className="scroll-button left" onClick={scrollLeft}>
+            &#8592;
+          </button>
+          <div className="project-container" ref={scrollContainerRef}>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                header={project.header}
+                body={project.body}
+                Icon={project.Icon}
+                link={project.link}
+              />
+            ))}
           </div>
+          <button className="scroll-button right" onClick={scrollRight}>
+            &#8594;
+          </button>
         </div>
       </div>
       <Footer />

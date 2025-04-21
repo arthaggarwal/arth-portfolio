@@ -3,7 +3,7 @@ const comps = [
     year: "2023",
     title: "Astrigue",
     description:
-      "Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
+      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
     Icon: () => (
       <svg
         fill="#000000"

@@ -1,54 +1,93 @@
 .intro {
   flex-direction: row;
   display: flex;
-  margin-top: 7rem;
-  width: 60vw;
+  margin-top: 2rem;
+  width: 70vw;
   height: auto;
   align-items: center;
+  flex-direction: row;
+  align-items: start;
+  margin-top: 7rem;
+  opacity: 0;
 }
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+.fade-in {
+  animation: fadeIn 0.3s 0.1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-delay {
+  animation: fadeIn 0.3s 0.2s ease-out forwards;
 }
 
 .yappings {
   align-items: flex-start;
   overflow-wrap: break-word;
   word-break: break-word;
-  width: 50%;
+  width: 40%;
 }
+
 .profile-pic {
   border-radius: 10%;
   background: var(--secondary-color);
-  width: 16vw;
+  width: 30vh;
   height: 30vh;
   margin-left: 20rem;
+  opacity: 0;
+  transform: translateX(20px) scale(0.9);
+  animation: fadeSlideIn 0.3s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 .icon {
   width: 30px;
   height: 30px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .icon:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
+  transform: scale(1.2) rotate(5deg);
+  filter: brightness(1.2) drop-shadow(0 0 5px rgba(206, 74, 126, 0.7));
+  opacity: 0.9;
 }
 
 .icons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.3s 0.2s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-area {
   display: flex;
   flex-direction: column;
   margin-top: 2.5rem;
-  width: 60vw;
+  width: 70vw;
+  opacity: 0;
+  animation: fadeIn 0.3s 0.2s ease-out forwards;
 }
 
 .project-area {
@@ -71,9 +110,8 @@
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  padding: 1rem;
+  padding: 15px 5px 25px 5px;
   scroll-behavior: smooth;
-  padding: 0;
   margin: 0;
 }
 
@@ -91,11 +129,25 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, background-color 0.2s ease;
+  animation: pulseButton 3s infinite;
+}
+
+@keyframes pulseButton {
+  0% {
+    box-shadow: 0 0 0 0 rgba(206, 74, 126, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(206, 74, 126, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(206, 74, 126, 0);
+  }
 }
 
 .scroll-button:hover {
   transform: scale(1.1);
   background-color: rgba(0, 0, 0, 0.7);
+  animation: none;
 }
 
 .scroll-button.left {
@@ -116,7 +168,7 @@
 
 .project-card {
   background: linear-gradient(145deg, #2a2a29, #1f1f1e);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.11);
   width: 12.5vw;
   height: 24vh;
   display: flex;
@@ -128,13 +180,42 @@
   flex-shrink: 0;
   padding: 15px;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Improve transition for smoother animation */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  /* Add margin to ensure shadow has room */
+  margin: 5px;
+  /* This will help contain any overflow when card scales up */
+  will-change: transform;
+}
+
+.animated-project-card {
+  animation: slideUpFade 0.3s ease-out forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(206, 74, 126, 0.5),
-    0 4px 6px rgba(206, 74, 126, 0.3);
+  /* Enhanced scale effect and increased upward movement */
+  transform: translateY(-12px) scale(1.05);
+  /* Larger, more visible shadow with accent color */
+  box-shadow: 0 8px 20px rgba(206, 74, 126, 0.16),
+    0 4px 14px rgba(0, 0, 0, 0.11);
+  /* Subtle background change */
+  background: linear-gradient(145deg, #2d2d2c, #232322);
+  /* Add z-index to ensure card appears above others when hovering */
+  z-index: 5;
 }
 
 .project-header {
@@ -157,4 +238,85 @@
   height: 40px;
   margin-bottom: 1rem;
   fill: #ce4a7e;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover svg {
+  transform: scale(1.1) rotate(-5deg);
+  animation: wiggle 1s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(7deg);
+  }
+}
+
+/* Navbar entrance animation */
+.navbar {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: navbarDrop 0.3s 0.1s cubic-bezier(0.4, 1, 0.6, 1) forwards;
+}
+@keyframes navbarDrop {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Footer fade-in */
+footer {
+  opacity: 0;
+  animation: fadeInFooter 0.3s 0.2s ease-out forwards;
+}
+@keyframes fadeInFooter {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Section header pop-in */
+.header {
+  opacity: 0;
+  animation: revealText 0.3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.sub-header {
+  opacity: 0;
+  animation: revealText 0.3s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.body-text {
+  opacity: 0;
+  animation: revealText 0.3s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes revealText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popInHeader {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
