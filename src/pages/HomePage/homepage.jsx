@@ -9,6 +9,7 @@ import Icons from "./components/icons";
 import ProjectCard from "./components/project_card";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import TechStack from "./components/TechStack";
 
 // styles
 import "../../App.css";
@@ -19,15 +20,15 @@ const HomePage = () => {
 
   useEffect(() => {
     // Animate intro and skills section
-    const intro = document.querySelector('.intro');
-    if (intro) intro.classList.add('fade-in');
-    const skills = document.querySelector('.skills-section');
-    if (skills) skills.classList.add('fade-in-delay');
+    const intro = document.querySelector(".intro");
+    if (intro) intro.classList.add("fade-in");
+    const skills = document.querySelector(".skills-section");
+    if (skills) skills.classList.add("fade-in-delay");
     // Animate project cards
-    const cards = document.querySelectorAll('.project-container .project-card');
+    const cards = document.querySelectorAll(".project-container .project-card");
     cards.forEach((card, i) => {
       card.style.animationDelay = `${0.3 + i * 0.15}s`;
-      card.classList.add('animated-project-card');
+      card.classList.add("animated-project-card");
     });
   }, []);
 
@@ -101,6 +102,7 @@ const HomePage = () => {
           </button>
         </div>
       </div>
+      <TechStack />
       <Footer />
     </div>
   );
