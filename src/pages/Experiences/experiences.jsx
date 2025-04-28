@@ -10,21 +10,18 @@ import Footer from "../../components/footer";
 
 export default function Experiences() {
   useEffect(() => {
-    // Animate section headers
     const headers = document.querySelectorAll(".header, .sub-header");
     headers.forEach((header, i) => {
       header.style.animationDelay = `${0.3 + i * 0.2}s`;
       header.classList.add("animated-header");
     });
 
-    // Animate experience cards with staggered delay
     const expCards = document.querySelectorAll(".experience-card");
     expCards.forEach((card, i) => {
       card.style.animationDelay = `${0.5 + i * 0.15}s`;
       card.classList.add("animate-card");
     });
 
-    // Animate global cards with staggered delay
     const globalCards = document.querySelectorAll(".global-card");
     globalCards.forEach((card, i) => {
       card.style.animationDelay = `${0.7 + i * 0.15}s`;
@@ -35,11 +32,11 @@ export default function Experiences() {
   return (
     <div className="body">
       <Navbar current_page="experiences" />
-      <div className="experiences-content" style={{ marginTop: "7rem" }}>
+      <div className="about-content" style={{ marginTop: "7rem" }}>
         <p className="header">Experiences</p>
         <div className="leadership">
           <p className="sub-header">More about me ...</p>
-          <div className="experience-container">
+          <div className="about-container">
             {aboutme.map((experience, index) => (
               <ExperienceCard
                 key={index}
@@ -51,7 +48,7 @@ export default function Experiences() {
           </div>
         </div>
         <div className="global-experiences">
-          <p className="sub-header">Global Experiences</p>
+          <p className="sub-header">Experiences</p>
           <div className="experience-container">
             {global_data.map((experience, index) => (
               <GlobalCard

@@ -10,9 +10,15 @@
 }
 
 .experience-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+.about-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
   padding: 1.5rem 0;
@@ -25,7 +31,6 @@ svg {
   fill: #dd7596;
 }
 
-/* Animations for experiences page */
 .experiences-content {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
@@ -48,7 +53,10 @@ svg {
 .global-card {
   opacity: 0;
   transform: translateY(30px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.11);
+  will-change: transform, box-shadow;
 }
 
 .animate-card {
@@ -64,18 +72,10 @@ svg {
 
 .experience-card:hover,
 .global-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.experience-card svg {
-  transition: transform 0.3s ease, fill 0.3s ease;
-}
-
-.experience-card:hover svg {
-  transform: scale(1.2);
-  fill: var(--accent-color);
-  animation: spin 2s ease-in-out;
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(221, 117, 150, 0.16),
+    0 4px 14px rgba(0, 0, 0, 0.11);
+  z-index: 5;
 }
 
 @keyframes spin {
@@ -91,12 +91,4 @@ svg {
   100% {
     transform: rotate(0deg);
   }
-}
-
-.global-card img {
-  transition: transform 0.5s ease;
-}
-
-.global-card:hover img {
-  transform: scale(1.1);
 }

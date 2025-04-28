@@ -1,7 +1,6 @@
 .intro {
   flex-direction: row;
   display: flex;
-  margin-top: 2rem;
   width: 70vw;
   height: auto;
   align-items: center;
@@ -184,14 +183,11 @@
   flex-shrink: 0;
   padding: 15px;
   position: relative;
-  /* Improve transition for smoother animation */
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     box-shadow 0.4s ease, background 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
-  /* Add margin to ensure shadow has room */
   margin: 5px;
-  /* This will help contain any overflow when card scales up */
   will-change: transform;
 }
 
@@ -211,14 +207,10 @@
 }
 
 .project-card:hover {
-  /* Enhanced scale effect and increased upward movement */
   transform: translateY(-12px) scale(1.05);
-  /* Larger, more visible shadow with accent color */
   box-shadow: 0 8px 20px rgba(221, 117, 150, 0.16),
     0 4px 14px rgba(0, 0, 0, 0.11);
-  /* Subtle background change */
   background: linear-gradient(145deg, #2d2d2c, #232322);
-  /* Add z-index to ensure card appears above others when hovering */
   z-index: 5;
 }
 
@@ -267,7 +259,6 @@
   }
 }
 
-/* Navbar entrance animation */
 .navbar {
   opacity: 0;
   transform: translateY(-10px);
@@ -280,7 +271,6 @@
   }
 }
 
-/* Footer fade-in */
 footer {
   opacity: 0;
   animation: fadeInFooter 0.3s 0.2s ease-out forwards;
@@ -291,7 +281,6 @@ footer {
   }
 }
 
-/* Section header pop-in */
 .header {
   opacity: 0;
   animation: revealText 0.3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -325,9 +314,8 @@ footer {
   }
 }
 
-/* Tech Stack Section */
 .skills-section {
-  margin: 3rem auto 2rem auto;
+  margin: 2.5rem auto 2rem auto;
   width: 70vw;
   background: none;
   border-radius: 0;
@@ -355,7 +343,6 @@ footer {
   align-items: center;
   width: 100%;
   justify-content: flex-start;
-  /* Ensure 5 items per row */
   max-width: 100%;
 }
 

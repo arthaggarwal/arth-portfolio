@@ -164,7 +164,6 @@ const techStack = [
       </svg>
     ),
   },
-  // Add more tech as needed
 ];
 
 const TechStack = () => (

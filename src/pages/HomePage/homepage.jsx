@@ -19,12 +19,10 @@ const HomePage = () => {
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
-    // Animate intro and skills section
     const intro = document.querySelector(".intro");
     if (intro) intro.classList.add("fade-in");
     const skills = document.querySelector(".skills-section");
     if (skills) skills.classList.add("fade-in-delay");
-    // Animate project cards
     const cards = document.querySelectorAll(".project-container .project-card");
     cards.forEach((card, i) => {
       card.style.animationDelay = `${0.3 + i * 0.15}s`;

@@ -18,7 +18,6 @@ export default function Achievements() {
   const [animating, setAnimating] = useState(false);
   const [cardsAnimating, setCardsAnimating] = useState(false);
 
-  // Sorting logic
   const sortedComps = useMemo(() => {
     if (sortBy === "default") return comps;
     const compsCopy = [...comps];
@@ -32,7 +31,6 @@ export default function Achievements() {
     return compsCopy;
   }, [sortBy]);
 
-  // Animation handler
   const handleSortTap = () => {
     setAnimating(true);
     setCardsAnimating(true);
@@ -41,22 +39,20 @@ export default function Achievements() {
       const currentIdx = sortOptions.findIndex((opt) => opt.value === sortBy);
       const nextIdx = (currentIdx + 1) % sortOptions.length;
       setSortBy(sortOptions[nextIdx].value);
-    }, 180); // Label animation duration
+    }, 180);
   };
 
   useEffect(() => {
     if (cardsAnimating) {
-      const timeout = setTimeout(() => setCardsAnimating(false), 350); // Card animation duration
+      const timeout = setTimeout(() => setCardsAnimating(false), 350);
       return () => clearTimeout(timeout);
     }
   }, [cardsAnimating]);
 
   useEffect(() => {
-    // Animate header with fade in
     const header = document.querySelector(".header");
     if (header) header.classList.add("fade-title");
 
-    // Animate achievement cards with staggered entrance
     const cards = document.querySelectorAll(".achievement-card");
     cards.forEach((card, i) => {
       card.style.animationDelay = `${0.3 + i * 0.1}s`;

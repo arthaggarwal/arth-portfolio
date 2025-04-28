@@ -22,7 +22,7 @@ export default function Navbar({ current_page }) {
         backgroundColor: "rgba(50, 50, 50, 0.7)",
         position: "fixed",
         top: "1rem",
-        width: "20%",
+        width: "28%",
         height: "5%",
         borderRadius: "20px",
         alignItems: "center",
@@ -46,8 +46,8 @@ export default function Navbar({ current_page }) {
         }
       >
         Home
-      </a>
-      {/*       <a
+      </a>{" "}
+      <a
         href="/experiences"
         style={{
           ...nav_item,
@@ -60,7 +60,7 @@ export default function Navbar({ current_page }) {
         }
       >
         Experiences
-      </a> */}
+      </a>
       <a
         href="/achievements"
         style={{
