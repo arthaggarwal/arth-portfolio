@@ -239,10 +239,11 @@
   outline: none;
 }
 
-.sort-tap-text:hover, .sort-tap-text:active {
+.sort-tap-text:hover,
+.sort-tap-text:active {
   background: none;
   color: var(--accent-color, #e67aa1);
-  filter: brightness(1.25) drop-shadow(0 0 6px rgba(230,122,161,0.18));
+  filter: brightness(1.25) drop-shadow(0 0 6px rgba(230, 122, 161, 0.18));
   transform: scale(1.04);
 }
 
@@ -255,13 +256,22 @@
 }
 
 .sort-tap-anim {
-  animation: sortFade 0.18s cubic-bezier(0.4,0,0.2,1);
+  animation: sortFade 0.18s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes sortFade {
-  0% { opacity: 1; transform: translateY(0); }
-  50% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .sort-arrow {
@@ -271,12 +281,18 @@
 }
 
 .cards-sort-anim .achievement-card {
-  animation: cardSortFade 0.12s cubic-bezier(0.4,0,0.2,1);
+  animation: cardSortFade 0.12s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes cardSortFade {
-  0% { opacity: 0; transform: translateY(20px) scale(0.97); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .achievements-header-row {
@@ -293,7 +309,11 @@
 }
 
 .sort-pill {
-  background: linear-gradient(90deg, var(--accent-color, #e67aa1) 60%, #232323 100%);
+  background: linear-gradient(
+    90deg,
+    var(--accent-color, #e67aa1) 60%,
+    #232323 100%
+  );
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -306,8 +326,13 @@
   opacity: 0.85;
 }
 
-.sort-pill.active, .sort-pill:hover {
-  background: linear-gradient(90deg, #fff 0%, var(--accent-color, #e67aa1) 100%);
+.sort-pill.active,
+.sort-pill:hover {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    var(--accent-color, #e67aa1) 100%
+  );
   color: #232323;
   opacity: 1;
   box-shadow: 0 4px 16px rgba(230, 122, 161, 0.15);
