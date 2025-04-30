@@ -1,6 +1,19 @@
-import react from "react";
+import react, { useState, useEffect } from "react";
 
 export default function Navbar({ current_page }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const nav_item = {
     display: "flex",
     flexDirection: "column",
@@ -11,6 +24,7 @@ export default function Navbar({ current_page }) {
     fontFamily: "Poppins",
     transition: "color 0.3s ease",
     fontWeight: "500",
+    fontSize: isMobile ? "0.9rem" : "1rem",
   };
 
   return (
@@ -18,12 +32,13 @@ export default function Navbar({ current_page }) {
       className="nav-container navbar"
       style={{
         display: "flex",
-        gap: "1vw",
+        gap: isMobile ? "0.5rem" : "1vw",
         backgroundColor: "rgba(50, 50, 50, 0.7)",
         position: "fixed",
         top: "1rem",
-        width: "28%",
-        height: "5%",
+        width: isMobile ? "85%" : "28%",
+        height: isMobile ? "auto" : "5%",
+        padding: isMobile ? "0.5rem" : "0",
         borderRadius: "20px",
         alignItems: "center",
         paddingLeft: "1rem",
