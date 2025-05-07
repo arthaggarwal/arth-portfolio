@@ -14,9 +14,5 @@ const footerStyle = {
 };
 
 export default function Footer() {
-  return (
-    <footer style={footerStyle}>
-      Made by Arth Aggarwal with <span style={{ color: "#DD7596" }}>♥</span>
-    </footer>
-  );
+  return <footer style={footerStyle}>Made by Arth Aggarwal</footer>;
 }

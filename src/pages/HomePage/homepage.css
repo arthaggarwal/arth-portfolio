@@ -112,10 +112,24 @@
   gap: 1rem;
   width: 100%;
   height: auto;
-  overflow-x: hidden;
-  padding: 15px 5px 25px 5px;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  margin: 0;
+  padding: 10px 0;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.project-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.project-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.project-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .scroll-button {
@@ -400,6 +414,11 @@ footer {
   font-weight: 500;
   margin-top: 0.2rem;
   letter-spacing: 0.5px;
+}
+
+/* Allow scrolling on the webpage */
+body {
+  overflow: auto;
 }
 
 /* Mobile responsiveness */
