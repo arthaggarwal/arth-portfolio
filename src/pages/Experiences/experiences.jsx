@@ -48,7 +48,7 @@ export default function Experiences() {
           </div>
         </div>
         <div className="global-experiences">
-          <p className="sub-header">Experiences</p>
+          <p className="sub-header">Highlights</p>
           <div className="experience-container">
             {global_data.map((experience, index) => (
               <GlobalCard
