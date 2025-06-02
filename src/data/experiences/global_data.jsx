@@ -1,41 +1,25 @@
-import placeholder from "../../assets/placeholder.png";
+import proj_sf from "../../assets/proj_sf.jpeg";
+import inc_exco from "../../assets/inc_exco.jpeg";
+import jakarta from "../../assets/jakarta.jpeg";
 
 const global_data = [
   {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
+    imageSrc: proj_sf,
+    title: "#ProjectSF 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "I went to San Francisco where I had the opportunity to learn about tech culture. It was an amazing experience where I learned about the latest trends in technology and innovation.",
   },
   {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
+    imageSrc: inc_exco,
+    title: "SST Inc. Exco",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "I was part of the executive committee of SST Inc. where I had the opportunity to lead and share my knowledge about react.",
   },
   {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
+    imageSrc: jakarta,
+    title: "Jakarta IEP Programme",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
-  },
-  {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
-  },
-  {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
-  },
-  {
-    imageSrc: placeholder,
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "I went to Jakarta where I had the opportunity to learn about the culture there as well as learn from the stuents at the BBS school.",
   },
 ];
 

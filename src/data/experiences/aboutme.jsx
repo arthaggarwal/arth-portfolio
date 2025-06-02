@@ -1,169 +1,239 @@
+import React from "react";
+
 const aboutme = [
   {
-    title: "Lorem Ipsum",
+    title: "IDP Program",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "I was part of the SST–Ngee Ann Polytechnic Integrated Diploma Programme which allowed me to immerse myself in advanced, hands-on learning experiences early in my academic journey.",
     Icon: () => (
       <svg
-        fill="#000000"
         width="40px"
         height="40px"
-        viewBox="0 0 32 32"
+        viewBox="0 0 40 40"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
+        <rect
+          x="6"
+          y="8"
+          width="28"
+          height="24"
+          rx="3"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M10 16H20"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M10 20H16"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M10 24H18"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M28 8L28 5"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M24 8L24 5"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M20 8L20 5"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16 8L16 5"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <circle
+          cx="28"
+          cy="20"
+          r="4"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M26 20L28 22L30 19"
+          stroke="#dd7596"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
   },
   {
-    title: "Lorem Ipsum",
+    title: "Dev Passion",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "My interest in technology began at a young age. At 14, I started exploring programming through JavaScript and HTML, building basic websites and interactive projects.",
     Icon: () => (
       <svg
-        fill="#000000"
         width="40px"
         height="40px"
-        viewBox="0 0 32 32"
+        viewBox="0 0 40 40"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
+        <rect
+          x="6"
+          y="6"
+          width="28"
+          height="28"
+          rx="3"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M16 14L12 20L16 26"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M24 14L28 20L24 26"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M21 12L19 28"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
   },
   {
-    title: "Lorem Ipsum",
+    title: "Tech Enthusiast",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "I actively participate in hackathons and Capture The Flag cybersecurity competitions. These events allow me to apply my skills in real-world scenarios.",
     Icon: () => (
       <svg
-        fill="#000000"
         width="40px"
         height="40px"
-        viewBox="0 0 32 32"
+        viewBox="0 0 40 40"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
+        <path
+          d="M20 34L6 26V14L20 6L34 14V26L20 34Z"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M20 22L13 18V12"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M20 22L27 18V12"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M20 22V30"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="20" cy="18" r="2" fill="#dd7596" />
+        <circle cx="27" cy="12" r="2" fill="#dd7596" />
+        <circle cx="13" cy="12" r="2" fill="#dd7596" />
       </svg>
     ),
   },
   {
-    title: "Lorem Ipsum",
+    title: "Curiosity Driven",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+      "Beyond the classroom, I enjoy exploring new areas in tech—whether it's diving into backend development, experimenting with AI tools, or learning about hardware integrations. ",
     Icon: () => (
       <svg
-        fill="#000000"
         width="40px"
         height="40px"
-        viewBox="0 0 32 32"
+        viewBox="0 0 40 40"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
+        <circle
+          cx="20"
+          cy="18"
+          r="8"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M20 30V26"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M13 32L15 28"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M27 32L25 28"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <circle
+          cx="20"
+          cy="18"
+          r="3"
+          fill="#181818"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M20 15V21"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M17 18H23"
+          stroke="#dd7596"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
       </svg>
     ),
   },

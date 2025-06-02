@@ -1,318 +1,197 @@
+import categoryIconMap from "./categoryIcons";
+
+// This function returns the appropriate icon component based on the achievement's category
+const getCategoryIcon = (category) => {
+  return categoryIconMap[category] || categoryIconMap["Informatics"]; // Default to Informatics if category not found
+};
+
 const comps = [
+  {
+    year: "2022",
+    title: "Astronomy Sci-fi Writing",
+    description:
+      "Participated in a national Astronomy writing competition where I wrote an originial science fiction story based on the theme of Astronomy. The story was well-received and I was awarded a certificate of participation.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Astronomy",
+  },
+  {
+    year: "2023",
+    title: "Satellite Design",
+    description:
+      "I participated in a national Satellite Design competition where I designed a satellite. During this competition, I had to conduct research on how to best design the satellite and soon after submitted it. I recieved a certificate of participation for this competition.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Astronomy",
+  },
   {
     year: "2023",
     title: "Astrigue",
     description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
-    achievement: "4",
-    category: "Science",
+      "Participated in a national Astronomy Quiz competition where I competed against other students from across the country. The competition was intense and I was able to showcase my knowledge of Astronomy. I received a certificate of participation for this competition.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Astronomy",
   },
   {
-    year: "2023",
-    title: "Informatics",
+    year: "2024",
+    title: "Astrigue",
     description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
+      "Participated in a national Astronomy Quiz competition where I competed against other students from across the country. The competition was intense and I was able to showcase my knowledge of Astronomy. I received a certificate of participation for this competition.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Astronomy",
+  },
+  {
+    year: "2024",
+    title: "PCTC Round 1",
+    description:
+      "Participated in the first round of Perse Team coding compeition where I solved multiple coding problems. This was my first competitive programming compeition and I managed to get higher participation rank.  ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "4",
+    category: "Informatics",
+  },
+  {
+    year: "2024",
+    title: "YBN CTF",
+    description:
+      "Participated in the YBN Capture the Flag compeition where I solved multiple challenges related to cybersecurity. This was my second CTF and I improved on my skills significatly from the first one and performed better. I received a certificate of participation for this compeition.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Cybersecurity",
+  },
+  {
+    year: "2024",
+    title: "ARTC Camp",
+    description:
+      "I participated in the ARTC camp which was organised in collaboration with the Advanced Remanufacturing and Technology Centre. In this competition, I learnt about 3D printing and arduino. The problem statement I tackled was to create a more accessible bus design.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Engineering",
+  },
+  {
+    year: "2024",
+    title: "Blahaj CTF",
+    description:
+      "This was my first Capture the Flag (CTF) competition where I solved multiple challenges related to cybersecurity. I managed to get a good rank in this competition and received a certificate of participation for this compeition.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Cybersecurity",
+  },
+  {
+    year: "2024",
+    title: "What the hack",
+    description:
+      "This was a hackathon organised by SUTD where I worked with a team and created a machine learning powered chrome extension that aimed to solve the problem of inequality as it would detect which messages were offensive and which were not. Through this experience, I learnt about chrome extensions.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Informatics",
+  },
+  {
+    year: "2025",
+    title: "Big D camp",
+    description:
+      "This was organised SUTD in collaboration with SST. In this camp, I had to create a disaster management robot that would be able to pick up objects and move to the homebase. In the end my team's robot was able to be controlled using bluetooth and a joystick. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Engineering",
+  },
+  {
+    year: "2025",
+    title: "NOI",
+    description:
+      "I participated in the National Olympiad in Informatics preliminary round where I was able to solve a few coding problems. In the end, I was able to get participation and learnt a lot about algorithms and computational thinking. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Informatics",
+  },
+  {
+    year: "2025",
+    title: "NCO",
+    description:
+      "I participated in the prelimary round of the National cybersecurity olympiad and was able to solve a few challenges related to cybersecurity. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Cybersecurity",
+  },
+  {
+    year: "2025",
+    title: "PCTC Round 1",
+    description:
+      "I participated in the first round of the Perse Coding Team Challenge again, where this time I was able to solve a lot more problems than the previous year. I had refined my programming skills and due to this was able to acheive a distinction.",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
     achievement: "1",
     category: "Informatics",
   },
   {
-    year: "2023",
-    title: "Other",
+    year: "2025",
+    title: "PCTC Round 2",
     description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
-    achievement: "1",
-    category: "Other",
-  },
-  {
-    year: "2023",
-    title: "Informatics",
-    description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
+      "Since I had done well in the first round, I was able to qualify for the second round. In this round I was able to solve a few problems and was able to get a merit.  ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
     achievement: "2",
     category: "Informatics",
   },
   {
-    year: "2023",
-    title: "Astrigue",
+    year: "2025",
+    title: "NSC",
     description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
-    achievement: "4",
-    category: "Science",
-  },
-  {
-    year: "2023",
-    title: "Informatics",
-    description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
+      "I participated in the National Software competition which was organised by Singapore Polytechnic. This was a hackathon where I had to use swift to create an app related to the theme of SG60. This was my first experience with swift. After much hardwork with my team we managed to get first place. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
     achievement: "1",
     category: "Informatics",
   },
   {
-    year: "2023",
-    title: "Other",
+    year: "2025",
+    title: "SASMO",
     description:
-      " Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition Participated in a national Astronomy Quiz competition, Participated in a national Astronomy Quiz competitionParticipated in a national Astronomy Quiz competition ",
-    Icon: () => (
-      <svg
-        fill="#000000"
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
-        data-name="Layer 1"
-      >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M14.96,6.82h-2.13v-1.22c0-2.4-1.95-4.35-4.35-4.35s-4.35,1.95-4.35,4.35v1.22H2c-.41,0-.75,.34-.75,.75V30c0,.41,.34,.75,.75,.75H14.96c.41,0,.75-.34,.75-.75V7.57c0-.41-.34-.75-.75-.75Zm-9.33-1.22c0-1.57,1.28-2.85,2.85-2.85s2.85,1.28,2.85,2.85v1.22H5.63v-1.22ZM14.21,29.25H2.75V8.32H14.21V29.25Z"></path>
-          <path d="M6.29,10.02h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M9.92,10.77c0,.41,.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75h-2.15c-.41,0-.75,.34-.75,.75Z"></path>
-          <path d="M6.29,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,13.23h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,16.43h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,19.64h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,22.84h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M6.29,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M12.82,26.05h-2.15c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h2.15c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z"></path>
-          <path d="M30.72,25.84s-.02-.1-.04-.14c0,0,0-.01,0-.02l-1.97-4.01c-.17-.35-.58-.51-.95-.37l-10.04,4s0,0,0,0c-.07,.03-.12,.07-.18,.12-.02,.02-.05,.03-.07,.04,0,0,0,0,0,0-.03,.03-.04,.06-.06,.09-.04,.05-.08,.1-.1,.15-.01,.03-.01,.07-.02,.11-.01,.06-.03,.11-.03,.17,0,0,0,0,0,0v4c0,.41,.34,.75,.75,.75h12.01c.41,0,.75-.34,.75-.75v-3.99s0-.01,0-.02c0-.05-.02-.1-.03-.15Zm-1.92-.58h-6.9s5.77-2.31,5.77-2.31l1.13,2.31Zm.45,3.99h-10.51v-2.5h10.51v2.5Z"></path>
-          <circle cx="21.25" cy="28" r=".61"></circle>
-          <circle cx="26" cy="28" r=".61"></circle>
-          <circle cx="26.71" cy="24.34" r=".61"></circle>
-        </g>
-      </svg>
-    ),
-    achievement: "1",
-    category: "Other",
+      "This was my first time participating in the Singapore and Asian Schools Math Olympiad. This was also my first math competition. After a lot of critical thinking, I managed to acheive a bronze award in this competition. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "3",
+    category: "Mathematics",
+  },
+  {
+    year: "2025",
+    title: "Grey CTF",
+    description:
+      "At the time of doing this CTF, this was the most challenging CTF I had done so far. I had to try my hardest and think out of the box to solve some of the challenges provided. Overall this deepened my understanding of cybersecurity. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Cybersecurity",
   },
 ];
 

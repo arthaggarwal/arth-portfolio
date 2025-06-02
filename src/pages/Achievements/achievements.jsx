@@ -7,25 +7,27 @@ import comps from "../../data/achievements/competitions";
 import Footer from "../../components/footer";
 
 const sortOptions = [
-  { value: "default", label: "Default Order" },
   { value: "year", label: "Year" },
   { value: "achievement", label: "Achievement" },
   { value: "category", label: "Category" },
 ];
 
 export default function Achievements() {
-  const [sortBy, setSortBy] = useState("default");
+  const [sortBy, setSortBy] = useState("year");
   const [animating, setAnimating] = useState(false);
   const [cardsAnimating, setCardsAnimating] = useState(false);
 
   const sortedComps = useMemo(() => {
-    if (sortBy === "default") return comps;
     const compsCopy = [...comps];
     if (sortBy === "year") {
+      // Sort by year in descending order (newest first)
       compsCopy.sort((a, b) => b.year.localeCompare(a.year));
     } else if (sortBy === "achievement") {
-      compsCopy.sort((a, b) => Number(b.achievement) - Number(a.achievement));
+      // Sort by achievement value in ascending order (lowest first)
+      // Making sure to convert string values to numbers for proper numeric comparison
+      compsCopy.sort((a, b) => Number(a.achievement) - Number(b.achievement));
     } else if (sortBy === "category") {
+      // Sort alphabetically by category name
       compsCopy.sort((a, b) => a.category.localeCompare(b.category));
     }
     return compsCopy;
@@ -61,7 +63,7 @@ export default function Achievements() {
   }, []);
 
   useEffect(() => {
-    if (sortBy !== "default") setCardsAnimating(true);
+    setCardsAnimating(true);
   }, [sortBy]);
 
   return (

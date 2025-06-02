@@ -64,11 +64,15 @@ const HomePage = () => {
           </p>
           <Icons />
         </div>
-        <img
-          className="profile-pic"
-          src={require("../../assets/placeholder.png")}
-          alt="Profile"
-        />
+        <div className="profile-pic-container">
+          <img
+            className="profile-pic"
+            src={require("../../assets/arth.jpeg")}
+            alt="Profile"
+            style={{ filter: "brightness(0.9)" }}
+          />
+          <div className="image-tint"></div>
+        </div>
       </div>
       <div className="project-area">
         <p

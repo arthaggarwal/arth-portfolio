@@ -3,8 +3,8 @@ import React from "react";
 const GlobalCard = ({ imageSrc, subheader, body }) => {
   const cardStyle = {
     background: "linear-gradient(145deg, #2a2a29, #1f1f1e)",
-    width: "20vw",
-    height: "30vh",
+    width: "289px",
+    height: "250px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -17,13 +17,31 @@ const GlobalCard = ({ imageSrc, subheader, body }) => {
     overflow: "hidden",
   };
 
-  const imageStyle = {
+  const imageContainerStyle = {
     width: "100%",
     height: "110px",
-    objectFit: "cover",
-    borderRadius: "8px",
+    position: "relative",
     marginBottom: "1rem",
+    borderRadius: "8px",
+    overflow: "hidden",
+  };
+
+  const imageStyle = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
     background: "#222",
+    filter: "brightness(0.9)", // Slightly darkens the image (made lighter)
+  };
+
+  const imageTintStyle = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.15)", // Black overlay with 15% opacity (made lighter)
+    pointerEvents: "none", // Allows clicking through to the image
   };
 
   const subheaderStyle = {
@@ -44,7 +62,10 @@ const GlobalCard = ({ imageSrc, subheader, body }) => {
 
   return (
     <div className="global-card" style={cardStyle}>
-      <img src={imageSrc} alt={subheader} style={imageStyle} />
+      <div style={imageContainerStyle}>
+        <img src={imageSrc} alt={subheader} style={imageStyle} />
+        <div style={imageTintStyle}></div>
+      </div>
       <div style={subheaderStyle}>{subheader}</div>
       <div style={bodyStyle}>{body}</div>
     </div>

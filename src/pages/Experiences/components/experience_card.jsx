@@ -3,8 +3,8 @@ import React from "react";
 const ExperienceCard = ({ header, body, Icon }) => {
   const cardStyle = {
     background: "linear-gradient(145deg, #2a2a29, #1f1f1e)",
-    width: "14vw",
-    height: "28vh",
+    width: "202px",
+    height: "260px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -21,6 +21,7 @@ const ExperienceCard = ({ header, body, Icon }) => {
     fontWeight: "600",
     margin: "0",
     color: "#f0f0f0",
+    height: "1.5rem",
   };
 
   const bodyStyle = {
@@ -29,6 +30,7 @@ const ExperienceCard = ({ header, body, Icon }) => {
     margin: "0",
     marginTop: "1rem",
     color: "#d0d0d0",
+    height: "3rem",
   };
 
   return (
