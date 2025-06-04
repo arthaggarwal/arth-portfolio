@@ -95,8 +95,11 @@
 
 .achievement-title {
   position: relative;
-  overflow: hidden;
-  height: 2rem;
+  /* Allow titles to wrap without being cut off */
+  overflow: visible;
+  height: auto;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .achievement-title::after {
