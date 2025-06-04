@@ -96,6 +96,7 @@
 .achievement-title {
   position: relative;
   overflow: hidden;
+  height: 2rem;
 }
 
 .achievement-title::after {
