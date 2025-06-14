@@ -193,6 +193,17 @@ const comps = [
     achievement: "5",
     category: "Cybersecurity",
   },
+  {
+    year: "2025",
+    title: "BBCS Conference",
+    description:
+      "I participated in the Building Blocs June 2025 AI conference. Through this conference I attended many workshops on machine learning partcipated in a hackathon where I created a model for sign language to text translation and a yolo detection model for detecting nearby images with my team. ",
+    get Icon() {
+      return getCategoryIcon(this.category);
+    },
+    achievement: "5",
+    category: "Informatics",
+  },
 ];
 
 export default comps;
